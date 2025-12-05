@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 try:
-    audio_file = open("celebrate.mp3", "rb")  # chemin vers ton audio
+    audio_file = open("StreamLit-App-Initiation/celebrate.mp3", "rb")  # chemin vers ton audio
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format='audio/mp3', start_time=0)
 except FileNotFoundError:
@@ -30,7 +30,7 @@ choix = st.selectbox("Choisissez votre arrondissement :", arrondissements)
 
 if choix == "Manhattan":
     try:
-        img = Image.open("manhattan.jpg")
+        img = Image.open("StreamLit-App-Initiation/manhattan.jpg")
         st.image(img, caption="Manhattan", width=600)
     except FileNotFoundError:
         st.warning("L'image de Manhattan n'a pas été trouvée.")
@@ -38,7 +38,7 @@ if choix == "Manhattan":
 
 elif choix == "Bronx":
     try:
-        img = Image.open("bronx.jpg")
+        img = Image.open("StreamLit-App-Initiation/bronx.jpg")
         st.image(img, caption="Bronx", width=600)
     except FileNotFoundError:
         st.warning("L'image du Bronx n'a pas été trouvée.")
@@ -46,7 +46,7 @@ elif choix == "Bronx":
 
 elif choix == "Queens":
     try:
-        img = Image.open("queens.jpg")
+        img = Image.open("StreamLit-App-Initiation/queens.jpg")
         st.image(img, caption="Queens", width=600)
     except FileNotFoundError:
         st.warning("L'image de Queens n'a pas été trouvée.")
@@ -54,7 +54,7 @@ elif choix == "Queens":
 
 elif choix == "Brooklyn":
     try:
-        img = Image.open("brooklyn.jpg")
+        img = Image.open("StreamLit-App-Initiation/brooklyn.jpg")
         st.image(img, caption="Brooklyn", width=600)
     except FileNotFoundError:
         st.warning("L'image de Brooklyn n'a pas été trouvée.")
