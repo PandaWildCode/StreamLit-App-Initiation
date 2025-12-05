@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 try:
-    audio_file = open("C:/Codage/Testeur/Stream/celebrate.mp3", "rb")  # chemin vers ton audio
+    audio_file = open("celebrate.mp3", "rb")  # chemin vers ton audio
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format='audio/mp3', start_time=0)
 except FileNotFoundError:
@@ -30,34 +30,35 @@ choix = st.selectbox("Choisissez votre arrondissement :", arrondissements)
 
 if choix == "Manhattan":
     try:
-        img = Image.open("C:/Codage/Testeur/Stream/manhattan.jpg.jpg")
-        st.image(img, caption="Manhattan", width=700)
+        img = Image.open("manhattan.jpg")
+        st.image(img, caption="Manhattan", width=600)
     except FileNotFoundError:
         st.warning("L'image de Manhattan n'a pas été trouvée.")
     st.write("Manhattan, le cœur économique de New York.")
 
 elif choix == "Bronx":
     try:
-        img = Image.open("C:/Codage/Testeur/Stream/bronx.jpg")
-        st.image(img, caption="Bronx", width=700)
+        img = Image.open("bronx.jpg")
+        st.image(img, caption="Bronx", width=600)
     except FileNotFoundError:
         st.warning("L'image du Bronx n'a pas été trouvée.")
     st.write("Le Bronx, la culture urbaine.")
 
 elif choix == "Queens":
     try:
-        img = Image.open("C:/Codage/Testeur/Stream/queens.jpg")
-        st.image(img, caption="Queens", width=700)
+        img = Image.open("queens.jpg")
+        st.image(img, caption="Queens", width=600)
     except FileNotFoundError:
         st.warning("L'image de Queens n'a pas été trouvée.")
-    st.write("Queens, cultures et de cuisines du monde.")
+    st.write("Queens, les cuisines du monde.")
+
 elif choix == "Brooklyn":
     try:
-        img = Image.open("C:/Codage/Testeur/Stream/brooklyn.jpg")
-        st.image(img, caption="brooklyn", width=700)
+        img = Image.open("brooklyn.jpg")
+        st.image(img, caption="Brooklyn", width=600)
     except FileNotFoundError:
         st.warning("L'image de Brooklyn n'a pas été trouvée.")
     st.write("Brooklyn, son pont et ses quartiers branchés.")
+
 else:
     st.info(f"Aucune image ou description disponible pour {choix}.")
-
